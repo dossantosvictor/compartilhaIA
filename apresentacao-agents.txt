@@ -1,0 +1,305 @@
+# Apresentação: Solução de Inteligência Operacional de Incidentes com IA
+
+## Objetivo
+
+Crie uma apresentação técnica-executiva de 10 slides para apresentar à coordenação uma solução de inteligência operacional de incidentes, explicando seu funcionamento, arquitetura, fluxo de dados, componentes, uso de IA e resultados esperados.
+
+O cenário atual consiste no acompanhamento da quantidade de incidentes. A proposta é implementar uma solução que consuma dados do ServiceNow, processe as informações, identifique padrões e produza análises que ajudem a coordenação a compreender o comportamento operacional e priorizar investigações.
+
+A apresentação deve explicar a solução proposta de forma concreta, como se estivéssemos apresentando o desenho de um produto que será construído.
+
+Não concentrar a apresentação em justificativas para o projeto, diagnóstico organizacional ou solicitação de autorização para um piloto.
+
+## Direção visual
+
+- Formato 16:9.
+- Estilo corporativo, profissional e tecnológico.
+- Fundo branco ou azul-marinho, com azul, cinza e ciano como cores de apoio.
+- Diagramas de arquitetura, pipelines de dados, fluxos de execução e exemplos de dashboards.
+- Pouco texto corrido e boa hierarquia visual.
+- Componentes editáveis no PowerPoint.
+- Não utilizar imagens decorativas de robôs ou IA futurista.
+- Não inventar tecnologias que já estejam implementadas.
+- Diferenciar visualmente os componentes propostos dos sistemas existentes.
+
+---
+
+## Slide 1 — Inteligência Operacional de Incidentes
+
+**Mensagem principal:** transformar dados de incidentes em inteligência para apoiar a coordenação.
+
+Apresentar a solução como uma camada analítica que complementa o acompanhamento atual.
+
+Mostrar três elementos conectados:
+
+1. Dados do ServiceNow.
+2. Motor de análise e inteligência com IA.
+3. Dashboard e relatório executivo com insights operacionais.
+
+Subtítulo: Uma arquitetura para transformar registros de incidentes em informações acionáveis.
+
+## Slide 2 — Visão geral da solução
+
+**Mensagem principal:** a solução automatiza o caminho entre os registros operacionais e a análise executiva.
+
+Criar um diagrama horizontal com o seguinte fluxo:
+
+ServiceNow → Extração de dados → Tratamento e normalização → Análise determinística → Inteligência com IA → Consolidação dos resultados → Dashboard e relatório executivo.
+
+Explicar brevemente cada componente:
+
+- **Extração:** coleta os registros autorizados do ServiceNow.
+- **Tratamento:** padroniza os dados e verifica sua qualidade.
+- **Análise determinística:** calcula indicadores, tendências e distribuições.
+- **Inteligência com IA:** interpreta descrições, sintetiza resultados e sugere hipóteses quando necessário.
+- **Consolidação:** organiza resultados e evidências.
+- **Apresentação:** disponibiliza informações para a coordenação.
+
+Indicar que a frequência de execução será definida conforme a necessidade operacional e a viabilidade técnica.
+
+## Slide 3 — Arquitetura lógica
+
+**Mensagem principal:** separar coleta, análise, IA e apresentação torna a solução modular e evolutiva.
+
+Desenhar quatro camadas.
+
+**Camada 1 — Origem**
+- ServiceNow.
+- Registros e histórico de incidentes disponíveis.
+- Metadados autorizados.
+
+**Camada 2 — Engenharia de dados**
+- Extração.
+- Validação de esquema.
+- Normalização.
+- Deduplicação, quando aplicável.
+- Persistência dos dados processados, se necessária.
+
+**Camada 3 — Inteligência**
+- Indicadores e regras determinísticas.
+- Análise de tendências.
+- Agrupamento de incidentes semelhantes.
+- IA generativa para sínteses e hipóteses.
+- Avaliação de qualidade e confiança.
+
+**Camada 4 — Consumo**
+- Dashboard.
+- Relatório executivo.
+- Detalhamento dos incidentes.
+- Recomendações para investigação.
+
+Adicionar controles transversais de segurança, rastreabilidade, logs, versionamento e observabilidade.
+
+Não assumir uma nuvem, banco de dados ou ferramenta específica. Apresentar as tecnologias como decisões de implementação posteriores, caso ainda não estejam definidas.
+
+## Slide 4 — Pipeline de processamento dos incidentes
+
+**Mensagem principal:** cada registro passa por etapas controladas antes de gerar conclusões.
+
+Criar um fluxo detalhado:
+
+1. Coletar os incidentes.
+2. Validar os campos disponíveis.
+3. Normalizar categorias, datas, sistemas e severidades.
+4. Verificar dados ausentes e inconsistências.
+5. Calcular indicadores.
+6. Identificar variações, concentrações e recorrências.
+7. Selecionar os achados que merecem interpretação adicional.
+8. Gerar sínteses e hipóteses com IA, quando aplicável.
+9. Validar a saída e associá-la às evidências.
+10. Publicar o resultado.
+
+Explicar que os cálculos numéricos devem ser realizados por código ou mecanismos analíticos confiáveis, e não delegados ao LLM.
+
+Mostrar que a IA recebe contexto estruturado e resultados analíticos, em vez de receber indiscriminadamente todos os dados brutos.
+
+## Slide 5 — Motor analítico: o que a solução investiga
+
+**Mensagem principal:** antes de utilizar IA generativa, a solução identifica fatos e padrões nos dados.
+
+Apresentar quatro capacidades.
+
+**1. Tendências**
+- Volume por período.
+- Variações percentuais.
+- Comparação entre períodos equivalentes.
+- Detecção de desvios relevantes.
+
+**2. Distribuição**
+- Incidentes por sistema.
+- Incidentes por categoria.
+- Incidentes por severidade.
+- Participação percentual de cada grupo.
+
+**3. Recorrência**
+- Repetição de ocorrências.
+- Descrições semelhantes.
+- Concentração por serviço ou componente.
+- Agrupamentos candidatos para investigação.
+
+**4. Priorização**
+- Severidade.
+- Recorrência.
+- Impacto operacional, quando disponível.
+- Critérios definidos com a coordenação.
+
+Informar que as dimensões disponíveis dependerão dos campos existentes no ServiceNow.
+
+Utilizar um dashboard conceitual com cartões de indicadores, gráfico de tendência e distribuição por categoria. Não apresentar valores como dados reais.
+
+## Slide 6 — Camada de IA: como os insights são gerados
+
+**Mensagem principal:** a IA interpreta resultados analíticos e ajuda a transformar padrões em informações compreensíveis.
+
+Desenhar o seguinte fluxo:
+
+Resultados analíticos → Seleção de achados relevantes → Preparação do contexto e das evidências → LLM → Saída estruturada → Validação → Relatório.
+
+Explicar as responsabilidades da IA:
+
+- Resumir as principais variações.
+- Explicar quais grupos contribuíram para uma mudança observada.
+- Interpretar descrições textuais e sugerir categorias.
+- Identificar temas comuns em registros semelhantes.
+- Sugerir hipóteses para investigação.
+- Produzir uma síntese executiva.
+
+Definir um formato conceitual de saída:
+
+- Insight.
+- Evidências.
+- Período analisado.
+- Sistemas ou categorias relacionados.
+- Grau de confiança ou limitações.
+- Hipótese de investigação.
+- Próxima ação sugerida.
+
+Estabelecer limites:
+
+- Não inventar dados ausentes.
+- Não declarar causa-raiz sem evidências suficientes.
+- Distinguir fatos calculados de interpretações geradas pela IA.
+- Encaminhar conclusões relevantes para validação humana.
+- Avaliar a qualidade das saídas com exemplos de referência.
+
+## Slide 7 — Exemplo de execução ponta a ponta
+
+**Mensagem principal:** um aumento de volume pode ser transformado em uma análise que orienta a investigação.
+
+Utilizar um exemplo fictício:
+
+- Mês 1: 120 incidentes.
+- Mês 2: 150 incidentes.
+- Mês 3: 180 incidentes.
+
+O volume aumentou 50% entre o primeiro e o terceiro mês.
+
+Mostrar a sequência:
+
+**Etapa 1 — Detecção**
+O mecanismo analítico identifica o aumento.
+
+**Etapa 2 — Decomposição**
+A solução verifica quais sistemas, categorias e severidades contribuíram para a variação, conforme os dados disponíveis.
+
+**Etapa 3 — Interpretação**
+A IA sintetiza os resultados e destaca os grupos mais relevantes.
+
+**Etapa 4 — Hipótese**
+A solução sugere investigar possíveis relações com recorrências e mudanças operacionais.
+
+**Etapa 5 — Resultado**
+O relatório apresenta o que mudou, quais evidências sustentam o achado e quais perguntas devem ser investigadas.
+
+Incluir uma observação: todos os números são fictícios. O aumento de volume, isoladamente, não demonstra a causa do problema.
+
+## Slide 8 — Dashboard e relatório executivo
+
+**Mensagem principal:** a coordenação recebe uma visão consolidada dos números, dos principais achados e das investigações prioritárias.
+
+Criar um mockup visual de dashboard com:
+
+**Indicadores superiores**
+- Total de incidentes no período.
+- Variação em relação ao período anterior.
+- Distribuição por severidade.
+- Quantidade de grupos recorrentes identificados.
+
+**Visualizações**
+- Evolução temporal.
+- Distribuição por sistema.
+- Categorias mais frequentes.
+- Grupos de incidentes semelhantes.
+
+**Seção de insights**
+- Principal variação identificada.
+- Evidências que sustentam o achado.
+- Hipóteses para investigação.
+- Próximas ações sugeridas.
+
+Todos os números exibidos devem ser claramente identificados como dados ilustrativos.
+
+Mostrar também um exemplo de relatório executivo com resumo do período, principais variações, pontos de atenção e recomendações.
+
+## Slide 9 — Operação, governança e avaliação
+
+**Mensagem principal:** a solução precisa ser confiável, rastreável e sustentável em produção.
+
+Apresentar os controles operacionais:
+
+- Execução programada ou sob demanda.
+- Registro de falhas e métricas de processamento.
+- Rastreabilidade entre o insight e os dados de origem.
+- Versionamento de regras, prompts e configurações.
+- Controle de acesso e tratamento adequado de informações sensíveis.
+- Avaliação de qualidade das classificações e sínteses.
+- Monitoramento de custo e latência da IA.
+- Tratamento de erros e possibilidade de reprocessamento.
+- Revisão humana de achados importantes.
+
+Indicadores de qualidade:
+- Completude dos dados.
+- Concordância com avaliações de especialistas.
+- Taxa de correção dos resultados gerados por IA.
+- Tempo necessário para produzir a análise.
+- Utilidade dos insights para os analistas.
+- Custo por execução.
+
+Não apresentar metas numéricas sem baseline.
+
+## Slide 10 — Entregáveis e evolução da solução
+
+**Mensagem principal:** a solução será construída em camadas, priorizando uma capacidade analítica funcional e evoluindo com base em evidências.
+
+Apresentar três etapas de implementação.
+
+**Etapa 1 — Fundação analítica**
+- Integração com dados autorizados do ServiceNow.
+- Tratamento e validação.
+- Indicadores e tendências.
+- Primeira versão do dashboard e relatório.
+
+**Etapa 2 — Inteligência assistida**
+- Agrupamento de ocorrências semelhantes.
+- Síntese de variações.
+- Hipóteses de investigação com evidências.
+- Avaliação da qualidade da IA.
+
+**Etapa 3 — Evolução operacional**
+- Priorização mais refinada.
+- Feedback dos analistas.
+- Reutilização dos aprendizados.
+- Avaliação de novas integrações e automações, conforme o valor demonstrado.
+
+Finalizar com uma visão do resultado esperado: uma capacidade reutilizável que conecta dados, análise, IA e tomada de decisão.
+
+### Regras finais
+
+- Gere os 10 slides completos.
+- Priorize a explicação de como a solução funciona.
+- Utilize diagramas técnicos claros e editáveis.
+- Evite repetir a justificativa de negócio em vários slides.
+- Não invente ferramentas, integrações ou capacidades existentes.
+- Diferencie arquitetura conceitual de implementação confirmada.
+- Inclua notas do apresentador explicando os componentes e o fluxo.
+- Garanta que a apresentação possa ser explicada em aproximadamente 15 minutos.
